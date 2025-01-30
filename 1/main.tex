@@ -204,7 +204,36 @@ Consider the set $G=\{e^{2\pi i k/5} : k=0,1,2,3,4\}$ with the operation of usua
 
 As a result, $(G,\cdot)$ is an Abelian group.\\
 
-(b) 
+(b)
+
+Listing all the elements in $G$, we get:
+
+\begin{itemize}
+\item $e^0 = 1$
+\item $e^{2\pi i/5}$
+\item $e^{4\pi i/5}$
+\item $e^{6\pi i/5}$
+\item $e^{8\pi i/5}$
+\end{itemize}
+
+\begin{enumerate}[(i)]
+\item First we consider the trivial set $\{e^0 = 1\}$. This is a subgroup of $G$ because it is closed under the operation of $G$: $1 \cdot 1 = 1$, and for every element in it, its inverse is also in it so that $1 \cdot 1^{-1} = 1$.
+
+\item Next we consider any proper subset $H$ of $G$ that contains any elements other than the identity element $e^0 = 1$, i.e., $a = e^{2\pi i k/5} \text{, for some } k \in \{1,2,3,4\}$.
+
+According to the definition of a subgroup, $H$ must be closed under the operation of $G$. Therefore, for any $a \in H$, $a \cdot a \in H$, meaning that $a^2 = e^{4\pi i k/5} \in H$.
+
+And since $a^2 \in H$, $a \cdot a^2 \in H$, meaning that $a^3 = e^{6\pi i k/5} \in H$.
+
+And since $a^3 \in H$, $a \cdot a^3 \in H$, meaning that $a^4 = e^{8\pi i k/5} \in H$.
+
+So far, we have $1, a, a^2, a^3, a^4 \in H$, which means $\{1, e^{2\pi i k/5}, e^{4\pi i k/5}, e^{6\pi i k/5}, e^{8\pi i k/5}\} \in H$.
+
+Let $k=1$, we get $\{1, e^{2\pi i/5}, e^{4\pi i/5}, e^{6\pi i/5}, e^{8\pi i/5}\} = G \in H$. However, $H$ is a subset of $G$, so $H=G$.
+
+\end{enumerate}
+
+Hence, the only subgroups of $G$ are $\{1\}, G$.
 
 \newpage
 

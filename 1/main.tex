@@ -146,23 +146,65 @@ Consider the set $G=\{e^{2\pi i k/5} : k=0,1,2,3,4\}$ with the operation of usua
 (a) In order to show that $(G,\cdot)$ is an Abelian group, we need to show that it is a group(closed, associative, identity, inverse) and that it is Abelian(commutative).
 
 \begin{enumerate}[(i)]
-\item Closure: When we multiply two elements $e^{2\pi i k_1/5}$ and $e^{2\pi i k_2/5}$:
-$e^{2\pi i k_1/5} \cdot e^{2\pi i k_2/5} = e^{2\pi i(k_1 + k_2)/5}$.
-For $k_1, k_2 \in {0,1,2,3,4}$, we get:
-$k_1 + k_2$ could be 0,1,2,3,4,5,6,7,8.
-For the sums that exceed 4, note that:
-$e^{2\pi i} = 1$, so:
-$e^{2\pi i(k_1 + k_2)/5} = e^{2\pi i(k_1 + k_2)/5} \cdot (e^{2\pi i})^{-n}$ where n is chosen so that $(k_1 + k_2 - 5n)$ is in ${0,1,2,3,4}$.
+    \item \textbf{Closure:}\\
+    Take any two elements in \(G\). They must be of the form
+    \[
+    e^{2\pi i k/5} \quad \text{and} \quad e^{2\pi i \ell/5}
+    \]
+    for some \(k,\ell \in \{0,1,2,3,4\}\). Their product is
+    \[
+    e^{2\pi i k/5} \cdot e^{2\pi i \ell/5}
+    = e^{2\pi i (k + \ell) / 5}.
+    \]
+    Since \(k+\ell\) is an integer, \((k+\ell) \mod 5\) is again an integer in \(\{0,1,2,3,4\}\). Hence,
+    \[
+    e^{2\pi i (k+\ell)/5} \in \bigl\{ e^{2\pi i m/5} : m = 0,1,2,3,4 \bigr\}.
+    \]
+    Thus, the product is in \(G\), proving \textit{closure}.
+    
+    \item \textbf{Associativity:}\\
+    Multiplication of complex numbers in \(\mathbb{C}\) is associative. Hence, for any \(a,b,c \in G\),
+    \[
+    (a \cdot b) \cdot c = a \cdot (b \cdot c).
+    \]
+    This proves \textit{associativity}.
+    
+    \item \textbf{Identity element:}\\
+    We need \(e_G \in G\) such that \(e_G \cdot a = a\) for every \(a \in G\). Note that
+    \[
+    1 = e^{2\pi i \cdot 0/5} \in G,
+    \]
+    and for any \(e^{2\pi i k/5} \in G\),
+    \[
+    1 \cdot e^{2\pi i k/5} = e^{2\pi i k/5},
+    \quad
+    e^{2\pi i k/5} \cdot 1 = e^{2\pi i k/5}.
+    \]
+    Hence, \(1\) is the \textit{identity element} of \(G\).
+    
+    \item \textbf{Inverse element:}\\
+    For \(a = e^{2\pi i k/5} \in G\), we claim the inverse is \(e^{-2\pi i k/5}\). Indeed,
+    \[
+    e^{2\pi i k/5} \cdot e^{-2\pi i k/5}
+    = e^{2\pi i (k - k)/5}
+    = e^0 = 1.
+    \]
+    Also, \(-k \equiv (5-k) \pmod{5}\), so \(e^{-2\pi i k/5} \in G\). Thus every element has an \textit{inverse} in \(G\).
+    
+    \item \textbf{Commutativity:}\\
+    For \(a = e^{2\pi i k/5}, b = e^{2\pi i \ell/5} \in G\),
+    \[
+    a \cdot b = e^{2\pi i (k + \ell)/5}
+    = e^{2\pi i (\ell + k)/5}
+    = b \cdot a.
+    \]
+    Hence multiplication is commutative.
+    
+    \end{enumerate}
 
-\item Associativity:
+As a result, $(G,\cdot)$ is an Abelian group.\\
 
-\item Identity element:
-
-\item Inverse element:
-
-\item Commutativity:
-
-\end{enumerate}
+(b) 
 
 \newpage
 
@@ -172,12 +214,6 @@ Let $d(x,y)$ stand for the (Euclidean) distance between point $x,y \in \mathbb{R
 
 \textbf{Solution:}
 
-\newpage
 
-\section*{Exercise 5 (Optional)}
-
-Show that for any subgroup $H$ of the group $(\mathbb{Z},+)$ there is $k \in \mathbb{Z}$ such that $H=\{ka : a \in \mathbb{Z}\}$ (here $ka$ stands for the usual product of numbers $k$ and $a$).
-
-\textbf{Solution:}
 
 \end{document}

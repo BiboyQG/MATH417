@@ -69,6 +69,41 @@ Calculate
 \end{itemize}
 
 \textbf{Solution:}
+\begin{itemize}
+\item[(a)] To find $3^{100} \pmod{10}$:
+    \begin{itemize}
+        \item Note that $3^4 = 81 \equiv 1 \pmod{10}$
+        \item Therefore, $3^{100} \equiv 3^{4 \times 25} \equiv 1^{25} \equiv 1 \pmod{10}$
+    \end{itemize}
+
+\item[(b)] To find $5^{60} \pmod{7}$:
+    \begin{itemize}
+        \item By Euler's theorem, $\phi(7) = 6$
+        \item Therefore, $5^6 \equiv 1 \pmod{7}$
+        \item Hence, $5^{60} \equiv 5^{6 \times 10} \equiv 1^{10} \equiv 1 \pmod{7}$
+    \end{itemize}
+
+\item[(c)] To find $400^{60} \pmod{61}$:
+    \begin{itemize}
+        \item Note that $400 \equiv 34 \pmod{61}$ (since $400 = 6 \times 61 + 34$)
+        \item Therefore, $400^{60} \equiv 34^{60} \pmod{61}$
+        \item By Euler's theorem, $\phi(61) = 60$
+        \item $34^{60} \equiv 1 \pmod{61}$
+        \item Therefore, $400^{60} \equiv 34^{60} \equiv 1 \pmod{61}$
+    \end{itemize}
+
+\item[(d)] To find the last digit of $17^{50}$:
+    \begin{itemize}
+        \item This is equivalent to finding $17^{50} \pmod{10}$
+        \item $17 \equiv 7 \pmod{10}$
+        \item Therefore, we need to find $7^{50} \pmod{10}$
+        \item By Euler's theorem, $\phi(10) = 4$
+        \item Therefore, $7^4 \equiv 1 \pmod{10}$
+        \item Therefore, $17^{50} \equiv 7^{50} \equiv 7^{4 \times 12 + 2} \equiv 1^{12} \times 7^2 \equiv 7^2 \equiv 9 \pmod{10}$
+    \end{itemize}
+
+\end{itemize}
+
 \newpage
 
 \section*{Exercise 3}

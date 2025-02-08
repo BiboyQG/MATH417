@@ -156,7 +156,34 @@ Suppose that $\varphi: G \to H$ is a homomorphism, and let $e_G$ and $e_H$ be th
 \item[(b)] if $g^n = e_G$, then $\varphi(g)^n = e_H$
 \end{itemize}
 
-\textbf{Solution:}
+\textbf{Solution:} \\
+
+(a) We prove this by mathematical induction on $n$. \\
+
+\textbf{Base case:} For $n = 1$, we have
+$\varphi(g^1) = \varphi(g) = (\varphi(g))^1$ \\
+
+\textbf{Inductive hypothesis:} Assume that for some $k \in \mathbb{N}$, 
+$\varphi(g^k) = (\varphi(g))^k$ \\
+
+\textbf{Inductive step:} Consider $n = k + 1$
+\begin{align*}
+\varphi(g^{k+1}) &= \varphi(g^k \cdot g) \\
+&= \varphi(g^k) \cdot \varphi(g) \quad \text{(since $\varphi$ is a homomorphism)} \\
+&= (\varphi(g))^k \cdot \varphi(g) \quad \text{(by inductive hypothesis)} \\
+&= (\varphi(g))^{k+1}
+\end{align*}
+
+Therefore, by mathematical induction, $\varphi(g^n) = (\varphi(g))^n$ for all $n \in \mathbb{N}$. \\
+
+(b) Let $g \in G$ such that $g^n = e_G$. Then:
+\begin{align*}
+\varphi(g)^n &= \varphi(g^n) \quad \text{(by part (a))} \\
+&= \varphi(e_G) \\
+&= e_H \quad \text{(since homomorphisms map identity to identity)}
+\end{align*}
+
+Therefore, if $g^n = e_G$, then $\varphi(g)^n = e_H$.
 \newpage
 
 \section*{Exercise 6}

@@ -19,9 +19,44 @@
 \begin{document}
 
 \section*{Exercise 1}
-Calculate the inverses for all elements in $\mathbb{Z}_{18}^*$.
+Calculate the inverses for all elements in $\mathbb{Z}_{18}^*$. \\
 
-\textbf{Solution:}
+\textbf{Solution:} \\
+
+First, finding all elements in $\mathbb{Z}_{18}^*$ (numbers coprime to 18):
+
+$$\mathbb{Z}_{18}^* = \{1, 5, 7, 11, 13, 17\}$$
+
+For $a \in \mathbb{Z}_{18}^*$, we need to find $b$ such that $ab \equiv 1 \pmod{18}$ \\
+
+1. For $a = 1$:
+  $$1 \cdot 1 \equiv 1 \pmod{18} \therefore 1^{-1} = 1$$
+
+2. For $a = 5$:
+  $$5 \cdot 11 \equiv 55 \equiv 1 \pmod{18} \therefore 5^{-1} = 11$$
+
+3. For $a = 7$:
+  $$7 \cdot 13 \equiv 91 \equiv 1 \pmod{18} \therefore 7^{-1} = 13$$
+
+4. For $a = 11$:
+  $$11 \cdot 5 \equiv 55 \equiv 1 \pmod{18} \therefore 11^{-1} = 5$$
+
+5. For $a = 13$:
+  $$13 \cdot 7 \equiv 91 \equiv 1 \pmod{18} \therefore 13^{-1} = 7$$
+
+6. For $a = 17$:
+  $$17 \cdot 17 \equiv 289 \equiv 1 \pmod{18} \therefore 17^{-1} = 17$$
+
+Therefore, the complete list of inverses for all elements in $\mathbb{Z}_{18}^*$ is:
+\begin{align*}
+1^{-1} &= 1 \\
+5^{-1} &= 11 \\
+7^{-1} &= 13 \\
+11^{-1} &= 5 \\
+13^{-1} &= 7 \\
+17^{-1} &= 17
+\end{align*}
+
 \newpage
 
 \section*{Exercise 2}

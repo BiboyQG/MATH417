@@ -144,9 +144,43 @@ Therefore, $\varphi^{-1}$ is a bijective homomorphism, making it an isomorphism.
 \newpage
 
 \section*{Exercise 4}
-Show that the multiplicative group $C_n = \{e^{2\pi i k/n} : k = 0,1,\ldots,n-1\}$ of $n$-th roots of unity is isomorphic to $\mathbb{Z}_n$.
+Show that the multiplicative group $C_n = \{e^{2\pi i k/n} : k = 0,1,\ldots,n-1\}$ of $n$-th roots of unity is isomorphic to $\mathbb{Z}_n$. \\
 
-\textbf{Solution:}
+\textbf{Solution:} \\
+
+To show that $C_n \cong \mathbb{Z}_n$, we need to prove that there exists a bijective homomorphism $\phi: \mathbb{Z}_n \to C_n$. \\
+
+Define $\phi: \mathbb{Z}_n \to C_n$ by
+\[\phi(k) = e^{2\pi i k/n}\]
+
+where $k \in \{0,1,\ldots,n-1\}$ \\
+
+\begin{align*}
+\phi(a + b \bmod n) &= e^{2\pi i(a + b \bmod n)/n} \\
+&= e^{2\pi i(a + b)/n} \\
+&= e^{2\pi ia/n} \cdot e^{2\pi ib/n} \\
+&= \phi(a) \cdot \phi(b)
+\end{align*}
+
+Therefore, $\phi$ is a homomorphism. \\
+
+Suppose $\phi(a) = \phi(b)$ for some $a,b \in \{0,1,\ldots,n-1\}$
+Then:
+\[e^{2\pi ia/n} = e^{2\pi ib/n}\]
+\[e^{2\pi i(a-b)/n} = 1\]
+
+This means $n$ divides $(a-b)$ since these are $n$-th roots of unity.
+Since $a,b \in \{0,1,\ldots,n-1\}$, we must have $a = b$. \\
+
+$\phi$ is injective. \\
+
+For any $e^{2\pi ik/n} \in C_n$, we have $k \in \{0,1,\ldots,n-1\}$ \\
+
+Since $\phi(k) = e^{2\pi ik/n}$, every element in $C_n$ has a preimage in $\mathbb{Z}_n$. \\
+
+Therefore, $\phi$ is surjective. \\
+
+Since $\phi$ is a bijective homomorphism, it is an isomorphism. Therefore, $C_n \cong \mathbb{Z}_n$.
 \newpage
 
 \section*{Exercise 5}

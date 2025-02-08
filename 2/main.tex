@@ -187,8 +187,58 @@ Therefore, if $g^n = e_G$, then $\varphi(g)^n = e_H$.
 \newpage
 
 \section*{Exercise 6}
-Show that a group $G$ is abelian if and only if $(ab)^2 = a^2b^2$ for all $a,b \in G$.
+Show that a group $G$ is abelian if and only if $(ab)^2 = a^2b^2$ for all $a,b \in G$. \\
 
-\textbf{Solution:}
+\textbf{Solution:} \\
+
+Since this is an "if and only if" statement, we will prove both directions. \\
+
+($\Rightarrow$) If $G$ is abelian, then $(ab)^2 = a^2b^2$ for all $a,b \in G$. \\
+
+If $G$ is abelian, then $ab = ba$ for all $a,b \in G$. \\
+
+Therefore:
+\begin{align*}
+(ab)^2 &= (ab)(ab) \\
+&= a(ba)b \quad \text{(by associativity)} \\
+&= a(ab)b \quad \text{(since $G$ is abelian)} \\
+&= (aa)(bb) \quad \text{(by associativity)} \\
+&= a^2b^2
+\end{align*}
+
+($\Leftarrow$) If $(ab)^2 = a^2b^2$ for all $a,b \in G$, then $G$ is abelian, meaning $ab = ba$. \\
+
+For any $a,b \in G$:
+\begin{align*}
+(ab)^2 &= a^2b^2 \\
+(ab)(ab) &= (aa)(bb) \\
+ab \cdot ab &= aa \cdot bb
+\end{align*}
+
+Now, multiply both sides on the left by $(ab)^{-1}$ and on the right by $(bb)^{-1}$:
+\begin{align*}
+(ab)^{-1}(ab \cdot ab)(bb)^{-1} &= (ab)^{-1}(aa \cdot bb)(bb)^{-1} \\
+ab \cdot (bb)^{-1} &= (ab)^{-1} \cdot aa \cdot bb \cdot (bb)^{-1} \\
+ab \cdot b^{-2} &= (ab)^{-1} \cdot aa \\
+\end{align*}
+
+Multiply both sides on the right by $b$:
+\begin{align*}
+ab \cdot b^{-2} \cdot b &= (ab)^{-1} \cdot aa \cdot b \\
+ab \cdot b^{-1} &= (ab)^{-1} \cdot aa \cdot b \\
+a &= (ab)^{-1} \cdot aa \cdot b \\
+a &= b^{-1}a^{-1} \cdot aa \cdot b \\
+a &= b^{-1}a \cdot b
+\end{align*}
+
+Multiply both sides on the left by $b$:
+\begin{align*}
+ba &= a \cdot b \\
+ba &= ab
+\end{align*}
+
+Hence, $G$ is abelian. \\
+
+Therefore, we have shown that $G$ is abelian if and only if $(ab)^2 = a^2b^2$ for all $a,b \in G$.
 
 \end{document}

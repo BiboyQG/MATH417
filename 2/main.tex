@@ -107,9 +107,40 @@ Calculate
 \newpage
 
 \section*{Exercise 3}
-Let $\varphi: G \to H$ be a group isomorphism. Show that the inverse map $\varphi^{-1}: H \to G$ is also an isomorphism.
+Let $\varphi: G \to H$ be a group isomorphism. Show that the inverse map $\varphi^{-1}: H \to G$ is also an isomorphism. \\
 
-\textbf{Solution:}
+\textbf{Solution:} \\
+
+To show that $\varphi^{-1}$ is an isomorphism, we need to prove that it is bijective and is a homomorphism. \\
+
+\textbf{1) } $\varphi^{-1}$ is a homomorphism: \\
+
+Let $h_1, h_2 \in H$. We need to show that $\varphi^{-1}(h_1h_2) = \varphi^{-1}(h_1)\varphi^{-1}(h_2)$ \\
+
+Since $\varphi$ is an isomorphism, there exist unique $g_1, g_2 \in G$ such that:
+$\varphi(g_1) = h_1$ and $\varphi(g_2) = h_2$ \\
+
+Therefore, $\varphi^{-1}(h_1) = g_1$ and $\varphi^{-1}(h_2) = g_2$ \\
+
+On the other hand, since $\varphi$ is a homomorphism:
+$\varphi(g_1g_2) = \varphi(g_1)\varphi(g_2) = h_1h_2$, we get:
+$\varphi^{-1}(h_1h_2) = g_1g_2$ \\
+
+Therefore:
+$\varphi^{-1}(h_1h_2) = g_1g_2 = \varphi^{-1}(h_1)\varphi^{-1}(h_2)$ \\
+
+This shows that $\varphi^{-1}$ is a homomorphism. \\
+
+\textbf{2) } $\varphi^{-1}$ is bijective: \\
+
+Since $\varphi$ is an isomorphism, it is bijective. By definition of inverse function:
+\begin{itemize}
+    \item $\varphi^{-1}$ is injective because $\varphi$ is surjective
+    \item $\varphi^{-1}$ is surjective because $\varphi$ is injective
+\end{itemize}
+
+Therefore, $\varphi^{-1}$ is a bijective homomorphism, making it an isomorphism.
+
 \newpage
 
 \section*{Exercise 4}

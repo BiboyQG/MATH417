@@ -253,6 +253,24 @@ Let $G$ be a group such that any non-identity element has order 2. Show that $G$
 
 \textbf{Solution:} \\
 
+From the question, we know that for any non-identity element $x \in G$, $x^2 = e$ (where $e$ is the identity element). \\
 
+Let $a,b \in G$ be arbitrary elements. For the element $aba$:
+\begin{align*}
+(aba)^2 &= e \text{ (since every non-identity element has order 2)} \\
+(aba)(aba) &= e \\
+ab(aa)ba &= e \\
+ab(e)ba &= e \text{ (since } a^2 = e) \\
+(ab)(ba) &= e
+\end{align*}
+
+Therefore, $ba = (ab)^{-1}$ \\
+
+However, since $(ab)^2 = e$, we know that $ab = (ab)^{-1}$ \\
+
+Combining the two results:
+$ba = (ab)^{-1} = ab$ \\
+
+Therefore, $ab = ba$ for all $a,b \in G$, which means $G$ is abelian.
 
 \end{document}

@@ -219,7 +219,32 @@ For each pair of groups from the following list, determine whether they are isom
 
 \textbf{Solution:} \\
 
+The order and structure of each group:
 
+   \begin{itemize}
+   \item $|\mathbb{Z}_{12}| = 12$, cyclic
+   \item $|\mathbb{Z}_3 \oplus \mathbb{Z}_2 \oplus \mathbb{Z}_2| = 3 \cdot 2 \cdot 2 = 12$, not cyclic
+   \item $|\mathbb{Z}_2 \oplus \mathbb{Z}_3 \oplus \mathbb{Z}_4| = 2 \cdot 3 \cdot 4 = 24$
+   \item $|\mathbb{Z}_3 \oplus \mathbb{Z}_4| = 3 \cdot 4 = 12$
+   \item $|C_{12}| = 12$, cyclic
+   \item $|C_4 \times C_3| = 4 \cdot 3 = 12$
+   \end{itemize}
+
+$\mathbb{Z}_2 \oplus \mathbb{Z}_3 \oplus \mathbb{Z}_4$ has order 24, while all others have order 12. Therefore, this group is not isomorphic to any other group in the list. \\
+
+For the remaining groups of order 12:
+   \begin{itemize}
+   \item $\mathbb{Z}_{12}$ and $C_{12}$ are both cyclic groups of order 12, therefore they are isomorphic.
+   
+   \item $\mathbb{Z}_3 \oplus \mathbb{Z}_2 \oplus \mathbb{Z}_2$ has elements of order at most 6 (lcm(3,2,2) = 6), so it's not isomorphic to $\mathbb{Z}_{12}$ or $C_{12}$.
+   
+   \item $\mathbb{Z}_3 \oplus \mathbb{Z}_4$ has an element of order 12 (by Chinese Remainder Theorem since gcd(3,4) = 1), making it isomorphic to $\mathbb{Z}_{12}$ and $C_{12}$.
+   
+   \item $C_4 \times C_3$ is isomorphic to $\mathbb{Z}_{12}$ (and thus to $C_{12}$ and $\mathbb{Z}_3 \oplus \mathbb{Z}_4$) by the Chinese Remainder Theorem since gcd(4,3) = 1.
+   \end{itemize}
+
+Therefore, the groups $\mathbb{Z}_{12}, C_{12}, \mathbb{Z}_3 \oplus \mathbb{Z}_4,$ and $C_4 \times C_3$ are all isomorphic to each other.
+$\mathbb{Z}_3 \oplus \mathbb{Z}_2 \oplus \mathbb{Z}_2$ and $\mathbb{Z}_2 \oplus \mathbb{Z}_3 \oplus \mathbb{Z}_4$ are not isomorphic to any other group in the list.
 
 \newpage
 

@@ -179,7 +179,50 @@ Show that
 
 \textbf{Solution:} \\
 
+(a) To show $\text{GL}_n(\mathbb{R})/\text{SL}_n(\mathbb{R}) \simeq \mathbb{R}^\times$: \\
 
+The determinant map $\det: \text{GL}_n(\mathbb{R}) \to \mathbb{R}^\times$ is a surjective group homomorphism. \\
+
+By the First Isomorphism Theorem, we have:
+$\text{GL}_n(\mathbb{R})/\ker(\det) \simeq \mathbb{R}^\times$ \\
+
+By definition, $\ker(\det) = \text{SL}_n(\mathbb{R})$.
+Therefore, $\text{GL}_n(\mathbb{R})/\text{SL}_n(\mathbb{R}) \simeq \mathbb{R}^\times$ \\
+
+(b) To show $\mathbb{C}^\times/C_n \simeq \mathbb{C}^\times$: \\
+
+The map $f: \mathbb{C}^\times \to \mathbb{C}^\times$ defined by $f(z) = z^n$ is a surjective group homomorphism. \\
+
+The kernel of $f$ is precisely $C_n = \{e^{2\pi i k/n}: k = 0,1,...,n-1\}$
+since these are exactly the elements that map to 1 under $f$. \\
+
+By the First Isomorphism Theorem:
+$\mathbb{C}^\times/\ker(f) \simeq \text{Im}(f) = \mathbb{C}^\times$ \\
+
+Therefore, $\mathbb{C}^\times/C_n \simeq \mathbb{C}^\times$ \\
+
+(c) To show $\mathbb{C}/\mathbb{R} \simeq \mathbb{R}$: \\
+
+The map $g: \mathbb{C} \to \mathbb{R}$ defined by $g(z) = \text{Im}(z)$
+where $\text{Im}(z)$ denotes the imaginary part of $z$. \\
+
+This is a surjective group homomorphism with kernel $\mathbb{R}$
+(since real numbers are precisely the complex numbers with zero imaginary part). \\
+
+By the First Isomorphism Theorem:
+$\mathbb{C}/\ker(g) \simeq \text{Im}(g) = \mathbb{R}$ \\
+
+Also,
+\begin{align*}
+   z \in \ker(g) &\iff g(z) = 0 \\
+   &\iff y = 0 \text{ (where $z = x + yi$)} \\
+   &\iff z = x \text{ for some $x \in \mathbb{R}$} \\
+   &\iff z \in \mathbb{R}
+\end{align*}
+
+meaning that $\ker(g) = \mathbb{R}$ \\
+
+Therefore, $\mathbb{C}/\mathbb{R} \simeq \mathbb{R}$
 
 \newpage
 

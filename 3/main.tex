@@ -106,7 +106,44 @@ Let $\psi: G \to K$ be a group isomorphism. Show that
 
 \textbf{Solution:} \\
 
+(a) Let $k_1, k_2 \in K$. Since $\psi$ is an isomorphism, there exist $g_1, g_2 \in G$ such that $\psi(g_1) = k_1$ and $\psi(g_2) = k_2$.
+Then:
+\begin{align*}
+k_1k_2 &= \psi(g_1)\psi(g_2) \\
+&= \psi(g_1g_2) \text{ (since $\psi$ is a homomorphism)} \\
+&= \psi(g_2g_1) \text{ (since $G$ is abelian)} \\
+&= \psi(g_2)\psi(g_1) \\
+&= k_2k_1
+\end{align*}
 
+Therefore, $K$ is abelian. \\
+
+(b) Let $k \in K$. We want to show that $k\psi(H)k^{-1} \subseteq \psi(H)$. \\
+
+Since $\psi$ is an isomorphism, there exists $g \in G$ such that $\psi(g) = k$.
+Let $h' \in \psi(H)$. Then there exists $h \in H$ such that $\psi(h) = h'$. \\
+
+Consider:
+\begin{align*}
+kh'k^{-1} &= \psi(g)\psi(h)\psi(g^{-1}) \\
+&= \psi(ghg^{-1}) \\
+&\in \psi(H) \text{ (since $H \triangleleft G$ implies $ghg^{-1} \in H$)}
+\end{align*}
+
+Therefore, $\psi(H) \triangleleft K$. \\
+
+(c) Let $n = \text{ord}_G(a)$. Then $a^n = e_G$ and $a^m \neq e_G$ for any $m < n$.
+\begin{align*}
+\psi(a^n) &= \psi(e_G) = e_K \\
+\psi(a^n) &= (\psi(a))^n \text{ (by homomorphism property)}
+\end{align*}
+
+Therefore, $(\psi(a))^n = e_K$, meaning that $\text{ord}_K(\psi(a)) \leq n$. \\
+
+Suppose there exists $m < n$ such that $(\psi(a))^m = e_K$.
+Then $\psi(a^m) = e_K$. Since $\psi$ is injective, this implies $a^m = e_G$, contradicting the minimality of $n$. \\
+
+Therefore, $\text{ord}_K(\psi(a)) = \text{ord}_G(a)$.
 
 \newpage
 
